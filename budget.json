@@ -1,0 +1,37 @@
+{
+    "mybudget": [
+        {
+            "title": "Eat out",
+            "budget": 30
+        },
+        {
+            "title": "Rent",
+            "budget": 400
+        },
+        {
+            "title": "Groceries",
+            "budget": 250
+        },
+        {
+            "title": "Mobile Bill",
+            "budget": 200
+        },
+        {
+            "title": "Shopping",
+            "budget": 160
+        },
+        {
+            "title": "Wifi Bill",
+            "budget": 150
+        },
+        {
+            "title": "Room Rent",
+            "budget": 120
+        },
+        {
+            "title": "Medical Bill",
+            "budget": 100
+        }
+        
+    ]
+}
