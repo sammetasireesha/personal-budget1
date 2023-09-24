@@ -1,8 +1,13 @@
+//budget api
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const port = 3000;
 
-app.use('/Sireesha', express.static('public'));
+app.use(cors());
+
+
+//app.use('/Sireesha', express.static('public'));
 
 const budget = {mybudget:[
     {title: 'Eat out' ,
@@ -16,10 +21,13 @@ budget: 400
     title: 'Groceries' ,
 budget: 90
 },
-]}
+]};
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
+//app.get('/', (req, res) => {
+    //res.send('Hello World!')
+//});
+app.get('/budget01', (req, res) => {
+  res.json(budget);
 });
 const fs = require('fs');
 
@@ -43,7 +51,7 @@ fs.readFile('budget.json', 'utf8', (err, data) => {
    
   
   app.listen(port, () =>{
-      console.log('Example app listening at http://localhost:3000');
+      console.log('API served at http://localhost:3000');
   });
   
 
