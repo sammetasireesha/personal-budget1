@@ -2,7 +2,7 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const port = 3000;
+const port = 3500;
 
 app.use(cors());
 
@@ -51,7 +51,7 @@ fs.readFile('budget.json', 'utf8', (err, data) => {
    
   
   app.listen(port, () =>{
-      console.log('API served at http://localhost:3000');
+      console.log('API served at http://localhost:3500');
   });
   
 
