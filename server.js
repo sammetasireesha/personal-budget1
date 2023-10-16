@@ -44,13 +44,6 @@ app.get('/budget01', (req, res) => {
   .then((data)=> {
     res.json(data)
   })
- /* budgetModel.find({}, (err, items) => {
-    if (err) {
-      res.status(500).send(err);
-    } else {
-      res.status(200).json(items);
-    }
-  });*/
 });
 
 // Endpoint to add new data to the database
