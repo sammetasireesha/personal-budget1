@@ -3,15 +3,11 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-<<<<<<< HEAD
 const port = 3000;
 const mongoose = require('mongoose');
 const router = express.Router();
 const budgetModel = require('./models/budgetSchema');
 const bodyParser = require('body-parser');
-=======
-const port = 3500;
->>>>>>> 2d46dcdfd5880de1f9aae71d9c1da166a2817bff
 
 // Set up middleware to parse JSON data
 app.use(bodyParser.json());
@@ -44,6 +40,13 @@ app.get('/budget01', (req, res) => {
   .then((data)=> {
     res.json(data)
   })
+ /* budgetModel.find({}, (err, items) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.status(200).json(items);
+    }
+  });*/
 });
 
 // Endpoint to add new data to the database
@@ -62,19 +65,8 @@ app.post('/budget01', (req, res) => {
     } else {
       res.status(201).send('Item added to the database');
     }
-<<<<<<< HEAD
   });*/
 });
-=======
-  });
-   
-  
-  app.listen(port, () =>{
-      console.log('API served at http://localhost:3500');
-  });
-  
-
->>>>>>> 2d46dcdfd5880de1f9aae71d9c1da166a2817bff
 
 
 
