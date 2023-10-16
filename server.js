@@ -3,11 +3,15 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
+<<<<<<< HEAD
 const port = 3000;
 const mongoose = require('mongoose');
 const router = express.Router();
 const budgetModel = require('./models/budgetSchema');
 const bodyParser = require('body-parser');
+=======
+const port = 3500;
+>>>>>>> 2d46dcdfd5880de1f9aae71d9c1da166a2817bff
 
 // Set up middleware to parse JSON data
 app.use(bodyParser.json());
@@ -65,8 +69,19 @@ app.post('/budget01', (req, res) => {
     } else {
       res.status(201).send('Item added to the database');
     }
+<<<<<<< HEAD
   });*/
 });
+=======
+  });
+   
+  
+  app.listen(port, () =>{
+      console.log('API served at http://localhost:3500');
+  });
+  
+
+>>>>>>> 2d46dcdfd5880de1f9aae71d9c1da166a2817bff
 
 
 
