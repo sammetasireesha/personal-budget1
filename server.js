@@ -13,7 +13,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use('/pbudget', express.static('public'));
+//app.use('/pbudget', express.static('public'));
 
 let url = 'mongodb://127.0.0.1:27017/sireesha_mongodb';
 
