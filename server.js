@@ -1,4 +1,3 @@
-//budget api
 
 const express = require('express');
 const cors = require('cors');
@@ -13,7 +12,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(cors());
 
-// app.use('/pbudget', express.static('public'));
+app.use('/pbudget', express.static('public'));
 
 let url = 'mongodb://127.0.0.1:27017/sireesha_mongodb';
 
@@ -50,7 +49,7 @@ app.get('/budget01', (req, res) => {
 });
 
 // Endpoint to add new data to the database
-app.post('/postBudget01', (req, res) => {
+app.post('/budget01', (req, res) => {
   const newItem = new budgetModel(req.body);
   newItem.save()
   .then((err)=> {
