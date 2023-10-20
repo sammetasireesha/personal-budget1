@@ -50,7 +50,7 @@ app.get('/budget01', (req, res) => {
 });
 
 // Endpoint to add new data to the database
-app.post('/postBudget01', (req, res) => {
+app.post('/budget01', (req, res) => {
   const newItem = new budgetModel(req.body);
   newItem.save()
   .then((err)=> {
